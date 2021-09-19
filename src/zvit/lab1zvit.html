@@ -1,29 +1,202 @@
-<div class="d-flex align-items-start" style="background-color: lightgray">
+<meta charset="UTF-8">
+<div class="d-flex align-items-start" style="background-color: #f8f8f8">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
         <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#seredov" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Опис предметного середовища</button>
         <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#meta" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Тема Мета Місце розташування лаби №1</button>
 
-        <button class="" id="v-pil-tab" data-bs-toggle="pill" data-bs-target="#struct" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Структура документа</button>
+        <button class="nav-link" id="v-pil-tab" data-bs-toggle="pill" data-bs-target="#struct" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Структура документа</button>
         <button class="nav-link" id="v-pilgs-tab" data-bs-toggle="pill" data-bs-target="#tabl" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">HTML-код ТАБЛИЦЬ</button>
 
         <button class="nav-link" id="v-pilgaes-tab" data-bs-toggle="pill" data-bs-target="#form" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">HTML-код ФОРМИ</button>
         <button class="nav-link" id="v-ettinsdgs-tab" data-bs-toggle="pill" data-bs-target="#image" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">HTML-код ЗОБРАЖЕННЯ</button>
 
-        <button class="" id="v-pial-tab" data-bs-toggle="pill" data-bs-target="#struct" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">------------------</button>
-
         <button class="nav-link" id="v-ettings-tab" data-bs-toggle="pill" data-bs-target="#vusnovku" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Висновки</button>
     </div>
     <div class="tab-content" id="v-pills-tabContent">
         <div class="tab-pane fade show active" id="seredov" role="tabpanel" aria-labelledby="v-pills-home-tab">
-            Готель
+            <p>Наша бригада зупинилась на темі "Hotel". На сьогодні туризм починає відновлювати своє життя, тому з'являється
+                багато готелів, що потребують власні сайти для взаємодії з клієнтами. Реалізація цієї теми потребує створення веб-застосунку
+                з функіоналом:
+            <ul>
+                <li>
+                    Бронювання номерів, що бередбачає вибір дати заїзду та виїзду
+                </li>
+                <li>
+                    Функціонал адміністратора та користувача.
+                    <ul>
+                        <li>
+                            Адмінастратор зможе змінювати та керувати броню номерів відвідувачів готелю.
+                        </li>
+                        <li>
+                            Також користувач зможе переглядати номери, в яких він зацікавлений.
+                        </li>
+                        <li>
+                            Буде додана можливість підбору номеру за
+                            характеристика: к-сть доросли, к-сть дітей, номер з видом та інші.
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            </p>
         </div>
         <div class="tab-pane fade" id="meta" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-            meta
+            <h5>Тема:</h5> СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОГО ГАЛУЗІ.<br>
+            РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, ФОРМАМИ в HTML-ДОКУМЕНТІ.<br>
+
+            <h5>Мета:</h5> придбати практичні навички роботи  з HTML-документом,<br>
+            таблицями,формами, зображеннями, посиланнями.<br>
+            <h5>Розташування:</h5><a href="https://github.com/VadimKost/web">https://github.com/VadimKost/web</a>
+        </div>
+        <div class="tab-pane fade" id="struct" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <xmp>
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Hotel</title>
+                    <meta charset="utf-8">
+                    <link rel="stylesheet" type="text/css" href="style.css">
+                </head>
+                <body>
+                <div id="container">
+                    <div id="header" align="center">
+                        <h2>Name hotel</h2>
+                    </div>
+
+                    <div id="navigation">
+                        <a href="second.html">Опис галузі</a></p>
+                    </div>
+
+
+                    <div id="content">
+
+                        <p class="fig" align="center">
+                            <img src="hotel.jpg" width="320" height="181" alt="Фотография">
+                        </p>
+
+                        <table border="1">
+                            <caption>Ціна номерів готелю</caption>
+                            <tr>
+                                <th class="first">Номер</th>
+                                <th colspan="1">Ціна</th>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="first">Стандарт</td>
+                                <td>Одномісний</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Двомісний</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2" class="first">Люкс</td>
+                                <td>Одномісний</td>
+                                <td>200</td>
+                            </tr>
+                            <tr>
+                                <<td>Двомісний</td>
+                                <td>500</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="1" class="first">Президентський</td>
+                                <td></td>
+                                <td>1000</td>
+                            </tr>
+                        </table>
+
+                        <form>
+                            <div class="form-floating mb-3" align="left">
+                                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                            <div class="form-floating" align="left">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+                        </form>
+
+
+
+                    </div>
+
+
+                </div>
+                </body>
+                </html>
+            </xmp>
         </div>
         <div class="tab-pane fade" id="tabl" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-            tabl</div>
-        <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="v-pills-settings-tab">form</div>
-        <div class="tab-pane fade" id="image" role="tabpanel" aria-labelledby="v-pills-messages-tab">image</div>
-        <div class="tab-pane fade" id="vusnovku" role="tabpanel" aria-labelledby="v-pills-settings-tab">vusnovku</div>
+            HTML-код таблиці:
+
+            <pre>
+                <code>
+            &lt;table border=&quot;1&quot;&gt;
+                &lt;caption&gt;Ціна номерів готелю&lt;/caption&gt;
+                &lt;tr&gt;
+                    &lt;th class=&quot;first&quot;&gt;Номер&lt;/th&gt;
+                    &lt;th colspan=&quot;1&quot;&gt;Ціна&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td rowspan=&quot;2&quot; class=&quot;first&quot;&gt;Стандарт&lt;/td&gt;
+                    &lt;td&gt;Одномісний&lt;/td&gt;
+                    &lt;td&gt;50&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;Двомісний&lt;/td&gt;
+                    &lt;td&gt;100&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td rowspan=&quot;2&quot; class=&quot;first&quot;&gt;Люкс&lt;/td&gt;
+                    &lt;td&gt;Одномісний&lt;/td&gt;
+                    &lt;td&gt;200&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;&lt;td&gt;Двомісний&lt;/td&gt;
+                    &lt;td&gt;500&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td rowspan=&quot;1&quot; class=&quot;first&quot;&gt;Президентський&lt;/td&gt;
+                    &lt;td&gt;&lt;/td&gt;
+                    &lt;td&gt;1000&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/table&gt;
+                </code>
+            </pre>
+            <img src="img/lab1/tabl.png">
+        </div>
+        <div class="tab-pane fade" id="form" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            HTML-код форма:
+            <pre>
+                <code>
+                    &lt;div class=&quot;form-floating mb-3&quot; align=&quot;left&quot;&gt;
+                        &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;floatingInput&quot; placeholder=&quot;name@example.com&quot;&gt;
+                        &lt;label for=&quot;floatingInput&quot;&gt;Email address&lt;/label&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;form-floating&quot; align=&quot;left&quot;&gt;
+                        &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;floatingPassword&quot; placeholder=&quot;Password&quot;&gt;
+                        &lt;label for=&quot;floatingPassword&quot;&gt;Password&lt;/label&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            <img src="img/lab1/form.png">
+        </div>
+        <div class="tab-pane fade" id="image" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            HTML-код зображення:
+            <pre>
+                <code>
+                    &lt;p class=&quot;fig&quot; align=&quot;center&quot;&gt;
+                        &lt;img src=&quot;hotel.jpg&quot; width=&quot;320&quot; height=&quot;181&quot; alt=&quot;Фотография&quot;&gt;
+                    &lt;/p&gt;
+                </code>
+            </pre>
+            <img src="img/lab1/img.png">
+        </div>
+        <div class="tab-pane fade" id="vusnovku" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            Висновок: Під час виконання лабороторної роботи ми ознайомились з мовою розмітки гіпер тексту HTML.
+            Використовуючи певні теги ми на практиці створили табличку а використали ворму. Також ми додали забраження
+            на нашу сторінку на використали посилання на іншу сторінку з описом галузі.
+        </div>
     </div>
 </div>
