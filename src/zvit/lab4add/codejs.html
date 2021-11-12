@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="a">
+
+</div>
+<br>
+<div id =b>
+
+</div>
+
+<button id="start">START</button>
+<div>
+    <input type="text">
+</div>
+
+
+
+<script>
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    function InsertionSort(A){
+        var n = A.length;
+        for (var i = 0; i < n; i++)
+        { var v = A[ i ], j = i-1;
+            while (j >= 0 && A[j] > v)
+            { A[j+1] = A[j]; j--; }
+            A[j+1] = v;
+        }
+        return A;
+    }
+    const button = document.querySelector('#start');
+
+    button.addEventListener('click', event => {
+        let A = [];
+        let B = [];
+
+        let step;
+        let maxs=document.querySelector('input').value;
+        let m = parseInt(maxs, 10);
+        for (step = 0; step < m; step++) {
+            A.push(getRandomInt(20))
+        }
+        let targetElement = document.querySelector('#a');
+        targetElement.insertAdjacentHTML('beforeend', "A " + A.toString());
+
+        let Amax = Math.max.apply(null, A);
+        for (step = 0; step < m; step++) {
+            B.push(Amax*A[step])
+        }
+
+        let te = document.querySelector('#b');
+        InsertionSort(A)
+        A.reverse()
+        te.insertAdjacentHTML('beforeend', "B "+B.toString());
+
+
+    });
+
+
+
+</script>
+</body>
+</html>
