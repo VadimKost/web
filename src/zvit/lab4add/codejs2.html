@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.6.4/math.js"></script>
+    <style>
+
+        .calculator {
+            width: 320px;
+            height: 480px;
+            background: #eee;
+            border-radius: 5px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2), -2px -2px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        output {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 40px;
+            background: #fff;
+            margin: 10px auto;
+            border-radius: 5px;
+            font-size: 1.4em;
+            font-weight: bold;
+            box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3),
+            inset -1px -1px 1px rgba(0, 0, 0, 0.3);
+        }
+
+        .keyboard {
+            height: 440px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+        }
+
+        button {
+            margin: 0.5em 1em;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+<div class="calculator">
+    <output></output>
+</div>
+</body>
+<script>
+    const output = document.querySelector('output')
+
+    const div = document.createElement('div')
+    div.classList.add('keyboard')
+    document.querySelector('.calculator').appendChild(div)
+
+    'C CE % / 7 8 9 * 4 5 6 - 1 2 3 + 0 ( ) sqrt ^ ='.split(' ')
+        .map(symbol => {
+            div.insertAdjacentHTML('beforeend', `<button value="${symbol}">${symbol}</button>`)
+        })
+
+    document.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', function () {
+            // по клику вызывается функция со значением кнопки в качестве параметра
+            calc(this.value)
+        })
+    })
+    document.addEventListener('keydown', event => {
+        if ((event.key).match(/[0-9%\/*\-+\(\)=]|Backspace|Enter/)) calc(event.key)
+    })
+    function calc(value) {
+        // если нажат знак равенства или Enter
+        if (value.match(/=|Enter/)) {
+            // пробуем выполнить операцию
+            try {
+                // вычисляем значение строки
+                // это возможно благодаря методу "evaluate" объекта "math"
+                // Math.trunc используется для округления до целого числа
+                output.textContent = Math.trunc(math.evaluate(output.textContent))
+
+                // если операцию выполнить невозможно
+            } catch {
+                // сохраняем значение поля
+                let oldValue = output.textContent
+                // создаем новую переменную
+                let newValue = 'недопустимое выражение'
+                // выводим значение новой переменной в поле
+                output.textContent = newValue
+                // через полторы секунды возвращаем полю старое значение
+                setTimeout(() => {
+                    output.textContent = oldValue
+                }, 1500)
+            }
+
+            // если нажат символ "C"
+        } else if (value === 'C') {
+            // очищаем поле
+            output.textContent = ''
+
+            // если нажат символ "СЕ" или Backspace
+        } else if (value.match(/CE|Backspace/)) {
+            // уменьшаем строку на один символ
+            output.textContent = output.textContent.substring(0, output.textContent.length - 1)
+
+            // если нажата любая другая (отфильтрованная) кнопка или клавиша
+        } else {
+            // записываем ее значение в поле
+            output.textContent += value
+        }
+    }
+</script>
+</html>
