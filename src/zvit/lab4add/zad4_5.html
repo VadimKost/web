@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="arr">
+
+</div>
+<br>
+<div id="arrPar">
+
+</div>
+<br>
+<div id="arrNepar">
+
+</div>
+<br>
+<div id="sort">
+
+</div>
+<br>
+</div>
+
+<button id="start">START</button>
+<div>
+    <input type="text">
+</div>
+
+
+<script>
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+    }
+
+    function selectionSort(arr){
+        for (let i = 0, l = arr.length, k = l - 1; i < k; i++) {
+        let indexMin = i;
+        for (let j = i + 1; j < l; j++) {
+            if (arr[indexMin] > arr[j]) {
+                indexMin = j;
+            }
+        }
+        if (indexMin !== i) {
+            [arr[i], arr[indexMin]] = [arr[indexMin], arr[i]];
+        }
+    }
+     return arr;
+    }
+
+    const button = document.querySelector('#start');
+
+    button.addEventListener('click', event => {
+        let arr = [];
+        let arrPar = [];
+        let arrNepar = [];
+
+        let step;
+        let maxs=document.querySelector('input').value;
+        let m = parseInt(maxs, 10);
+        for (step = 0; step < m; step++) {
+            arr.push(getRandomInt(20))
+        }
+
+
+
+
+        for (step = 0; step < m; step++) {
+            if (step % 2 == 0) {
+                arrPar.push(arr[step])
+            } else {
+                arrNepar.push(arr[step])
+            }
+        }
+
+        alert(arr.toString());
+
+        let targetElement = document.querySelector('#arr');
+        targetElement.insertAdjacentHTML('beforeend', "arr " + arr.toString());
+
+        let targetElement1 = document.querySelector('#arrPar');
+        targetElement1.insertAdjacentHTML('beforeend', "arrPar " + arrPar.toString());
+
+        let targetElement2 = document.querySelector('#arrNepar');
+        targetElement2.insertAdjacentHTML('beforeend', "arrNepar " + arrNepar.toString());
+
+
+
+        let targetElement3 = document.querySelector('#sort');
+        selectionSort(arr);
+        targetElement3.insertAdjacentHTML('beforeend', "sort " + arr.toString());
+      });
+</script>
+
+</body>
+</html>
