@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="container">
+
+    <div id="header">
+        <img src="../img/logo.png" height="100px" width="auto" style="float: left">
+        <h2 style="text-align: center; width: 90%;text-align: center;" >
+            HOTEL
+        </h2>
+        <h1 style="text-align: center; width: 90%;text-align: center;">
+            Vadim & Mukola
+        </h1>
+    </div>
+
+    <div id="navigation">
+        <H3>
+            Навігація
+        </H3>
+        <a href="second.php">Опис галузі</a></p>
+    </div>
+
+    <div id="news">
+        <h3>Новини готелю</h3>
+    </div>
+
+    <div id="content">
+
+        <p class="fig" align="center">
+            <img src="hotel.jpg" width="320" height="181" alt="Фотография">
+        </p>
+        <table border="1" class="floating">
+            <caption>Ціна номерів готелю</caption>
+            <tr>
+                <th class="first">Номер</th>
+                <th colspan="2">Ціна</th>
+            </tr>
+            <tr>
+                <td rowspan="2" class="first">Стандарт</td>
+                <td>Одномісний</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Двомісний</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td rowspan="2" class="first">Люкс</td>
+                <td>Одномісний</td>
+                <td>200</td>
+            </tr>
+            <tr>
+                <<td>Двомісний</td>
+                <td>500</td>
+            </tr>
+            <tr>
+                <td rowspan="1" class="first">Президентський</td>
+                <td></td>
+                <td>1000</td>
+            </tr>
+        </table>
+        <form>
+            <div class="form-floating mb-3" align="left">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating" align="left">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Password</label>
+            </div>
+        </form>
+    </div>
+
+    <div id="clear">
+
+    </div>
+
+    <div id="footer">
+        All rights are registered
+    </div>
+
+</div>
+</body>
+</html>

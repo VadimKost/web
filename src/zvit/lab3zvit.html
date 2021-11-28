@@ -1,0 +1,463 @@
+<div class="d-flex align-items-start" >
+  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <button class="nav-link active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#me3" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Тема Мета Місце розташування лаби №3</button>
+
+    <button class="nav-link" id="v-pilgs-tab" data-bs-toggle="pill" data-bs-target="#zov3" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Зовнішній вигляд макету</button>
+
+    <button class="nav-link" id="v-pilgaes-tab" data-bs-toggle="pill" data-bs-target="#codmaketa3" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">HTML-код макету</button>
+    <button class="nav-link" id="v-ettinsdgs-tab" data-bs-toggle="pill" data-bs-target="#zatabl3" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Розмітка сторінки за допомогою таблиці</button>
+    <button class="nav-link" id="v-div-tab" data-bs-toggle="pill" data-bs-target="#zablok3" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Розмітка сторінки за допомогою плаваючих блоків</button>
+
+    <button class="nav-link" id="v-taba" data-bs-toggle="pill" data-bs-target="#v-tab3" type="button" role="tab" aria-controls="v-tab" aria-selected="false">Висновки</button>
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="me3" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+      <p>
+        Тема: БЛОЧНА ВЕРСТКА HTML-ДОКУМЕНТУ ЗА МАКЕТОМ.
+      </p>
+      <p>
+        Мета: придбати практичні навички роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів,
+        з’ясувати переваги та недоліки типів макетів веб-сторінок
+      </p>
+      <p>
+        Розташування: <a href="https://github.com/VadimKost/web">https://github.com/VadimKost/web</a>
+      </p>
+    </div>
+    <div class="tab-pane fade" id="zov13" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+      <p>Зовнішній вигляд макету</p>
+      <img src="img/lab3/maket.jpg">
+      <img src="img/lab3/vyglad.png">
+    </div>
+    <div class="tab-pane fade" id="codmaketa3" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+      Код макета:
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;Hotel&lt;/title&gt;
+        &lt;meta charset=&quot;utf-8&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      &lt;div id=&quot;container&quot;&gt;
+
+        &lt;div id=&quot;header&quot;&gt;
+          &lt;img src=&quot;../img/logo.png&quot; height=&quot;100px&quot; width=&quot;auto&quot; style=&quot;float: left&quot;&gt;
+          &lt;h2 style=&quot;text-align: center; width: 90%;text-align: center;&quot; &gt;
+          HOTEL
+          &lt;/h2&gt;
+          &lt;h1 style=&quot;text-align: center; width: 90%;text-align: center;&quot;&gt;
+          Vadim &amp; Mukola
+          &lt;/h1&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;navigation&quot;&gt;
+          &lt;H3&gt;
+          Навігація
+          &lt;/H3&gt;
+          &lt;a href=&quot;second.html&quot;&gt;Опис галузі&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;news&quot;&gt;
+          &lt;h3&gt;Новини готелю&lt;/h3&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&quot;content&quot;&gt;
+         &lt;p class=&quot;fig&quot; align=&quot;center&quot;&gt;
+          &lt;img src=&quot;hotel.jpg&quot; width=&quot;320&quot; height=&quot;181&quot; alt=&quot;Фотография&quot;&gt;
+         &lt;/p&gt;
+         &lt;table border=&quot;1&quot; class=&quot;floating&quot;&gt;
+          &lt;caption&gt;Ціна номерів готелю&lt;/caption&gt;
+           &lt;tr&gt;
+            &lt;th class=&quot;first&quot;&gt;Номер&lt;/th&gt;
+            &lt;th colspan=&quot;2&quot;&gt;Ціна&lt;/th&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+            &lt;td rowspan=&quot;2&quot; class=&quot;first&quot;&gt;Стандарт&lt;/td&gt;
+            &lt;td&gt;Одномісний&lt;/td&gt;
+            &lt;td&gt;50&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+            &lt;td&gt;Двомісний&lt;/td&gt;
+            &lt;td&gt;100&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+            &lt;td rowspan=&quot;2&quot; class=&quot;first&quot;&gt;Люкс&lt;/td&gt;
+            &lt;td&gt;Одномісний&lt;/td&gt;
+            &lt;td&gt;200&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+            &lt;&lt;td&gt;Двомісний&lt;/td&gt;
+            &lt;td&gt;500&lt;/td&gt;
+           &lt;/tr&gt;
+           &lt;tr&gt;
+            &lt;td rowspan=&quot;1&quot; class=&quot;first&quot;&gt;Президентський&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;1000&lt;/td&gt;
+           &lt;/tr&gt;
+         &lt;/table&gt;
+         &lt;form&gt;
+          &lt;div class=&quot;form-floating mb-3&quot; align=&quot;left&quot;&gt;
+           &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;floatingInput&quot; placeholder=&quot;name@example.com&quot;&gt;
+           &lt;label for=&quot;floatingInput&quot;&gt;Email address&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;form-floating&quot; align=&quot;left&quot;&gt;
+           &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;floatingPassword&quot; placeholder=&quot;Password&quot;&gt;
+           &lt;label for=&quot;floatingPassword&quot;&gt;Password&lt;/label&gt;
+          &lt;/div&gt;
+         &lt;/form&gt;
+        &lt;/div&gt;
+
+      &lt;div id=&quot;clear&quot;&gt;
+      &lt;/div&gt;
+
+      &lt;div id=&quot;footer&quot;&gt;
+		All rights are registered
+      &lt;/div&gt;
+
+		&lt;/div&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+    </div>
+    <div class="tab-pane fade" id="zatabl3" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+      Розмітка сторінок за допомогою таблиць
+      <p>Варіант 1:</p>
+      <img src="img/lab3/maket.jpg">
+      <img src="img/lab3/tabl.png">
+      <p>Код:</p>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;title&gt;Табличная вёрстка&lt;/title&gt;
+       &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+       &lt;table border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&gt;
+        &lt;tr&gt;
+         &lt;th colspan=3&gt;шапка сайта (логотип, слоган, телефон)&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+         &lt;th width=&quot;15%&quot;&gt;навигация&lt;/th&gt;
+         &lt;th width=&quot;70%&quot;&gt;заголовок&lt;/th&gt;
+         &lt;th width=&quot;15%&quot;&gt;новини&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+         &lt;td width=&quot;15%&quot;&gt;
+          &lt;ul&gt;
+           &lt;li&gt;&lt;a href=&quot;tab.html&quot; title=&quot;Ссылка 1&quot;&gt;Ссылка 1&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt;&lt;a href=&quot;tab.html&quot; title=&quot;Ссылка 2&quot;&gt;Ссылка 2&lt;/a&gt;&lt;/li&gt;
+           &lt;li&gt;&lt;a href=&quot;tab.html&quot; title=&quot;Ссылка 3&quot;&gt;Ссылка 3&lt;/a&gt;&lt;/li&gt;
+          &lt;/ul&gt;
+         &lt;/td&gt;
+         &lt;td width=&quot;70%&quot;&gt;Контент&lt;/td&gt;
+         &lt;td width=&quot;15%&quot;&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+         &lt;td colspan=3&gt;Футер&lt;/td&gt;
+        &lt;/tr&gt;
+       &lt;/table&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <p>Варіант 5:</p>
+      <img src="img/lab3/maket5.jpg">
+      <img src="img/lab3/tabl5.png">
+      <p>Код:</p>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;title&gt;Табличная вёрстка&lt;/title&gt;
+       &lt;meta charset=&quot;UTF-8&quot;&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+       &lt;table id = &quot;table1&quot; border=&quot;1&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&gt;
+        &lt;tr&gt;
+         &lt;td id=&quot;nested&quot;&gt;
+         &lt;table id=&quot;table2&quot;&gt;
+          &lt;tr&gt;
+           &lt;td&gt;Вітаємо&lt;/td&gt;
+          &lt;/tr&gt;
+         &lt;/table&gt;
+        &lt;th colspan=4&gt;шапка сайта (логотип, слоган, телефон)
+        &lt;/th&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;th width=&quot;25%&quot;&gt;навигация&lt;/th&gt;
+        &lt;th width=&quot;25%&quot;&gt;заголовок&lt;/th&gt;
+        &lt;th width=&quot;25%&quot;&gt;новини&lt;/th&gt;
+        &lt;th width=&quot;25%&quot;&gt;Наші дані&lt;/th&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td width=&quot;25%&quot;&gt;
+         &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;tab.html&quot; title=&quot;Ссылка 1&quot;&gt;Ссылка 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;tab.html&quot; title=&quot;Ссылка 2&quot;&gt;Ссылка 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;tab.html&quot; title=&quot;Ссылка 3&quot;&gt;Ссылка 3&lt;/a&gt;&lt;/li&gt;
+         &lt;/ul&gt;
+        &lt;/td&gt;
+        &lt;td width=&quot;25%&quot;&gt;Контент&lt;/td&gt;
+        &lt;td width=&quot;25%&quot;&gt;&lt;/td&gt;
+        &lt;td width=&quot;25%&quot;&gt;&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;tr&gt;
+        &lt;td colspan=4&gt;Футер&lt;/td&gt;
+       &lt;/tr&gt;
+       &lt;/table&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+    </div>
+    <div class="tab-pane fade" id="zablok3" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+      Розмітка сторінки за допомогою плаваючих блоків
+      <p>Варіант 1:</p>
+      <img src="img/lab3/maket.jpg">
+      <img src="img/lab3/blok.png">
+
+      <p>Код:</p>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;title&gt;Hotel&lt;/title&gt;
+       &lt;meta charset=&quot;utf-8&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;
+      &lt;/head&gt;
+      &lt;style&gt;
+      body {
+      background: #FFF;
+      color: #000;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      }
+
+      #header {
+      background: #797979;
+      width: 100%;
+      height: 100px;
+      }
+
+      #container {
+      background: #a9a9a9;
+      margin: auto auto;
+      text-align: center;
+      width: 100%;
+      }
+
+      #navigation {
+      background: #40E0D0;
+      float: left;
+      width: 15%;
+      }
+
+      #news {
+      background: #40E0D0;
+      float: right;
+      width: 15%;
+      }
+
+      #content {
+      background: #ffffff;
+      width: 70%;
+      float: right;
+      }
+
+      #clear {
+      clear: both;
+      }
+
+      #footer {
+      background: #d0e292;
+      width: 100%;
+      height: 40px;
+      }
+      &lt;/style&gt;
+      &lt;body&gt;
+       &lt;div id=&quot;container&quot;&gt;
+        &lt;div id=&quot;header&quot;&gt;
+         &lt;h2&gt;
+          шапка сайта
+         &lt;/h2&gt;
+        &lt;/div&gt;
+		
+        &lt;div id=&quot;navigation&quot;&gt;
+         &lt;H3&gt;
+          Навігація
+         &lt;/H3&gt;
+         &lt;a href=&quot;second.html&quot;&gt;Опис галузі&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+
+       &lt;div id=&quot;news&quot;&gt;
+        &lt;h3&gt;Новини готелю&lt;/h3&gt;
+       &lt;/div&gt;
+
+       &lt;div id=&quot;content&quot;&gt;
+        &lt;h1&gt;
+         CONTENT
+        &lt;/h1&gt;
+        &lt;h1&gt;
+         CONTENT
+        &lt;/h1&gt;
+       &lt;/div&gt;
+
+       &lt;div id=&quot;clear&quot;&gt;
+
+       &lt;/div&gt;
+
+       &lt;div id=&quot;footer&quot;&gt;
+        FOOTER
+       &lt;/div&gt;
+
+       &lt;/div&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+      <p>Варіант 5:</p>
+      <img src="img/lab3/maket5.jpg">
+      <img src="img/lab3/blok5.png">
+
+      <p>Код:</p>
+      <pre>
+      <code>
+      &lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+      &lt;title&gt;Hotel&lt;/title&gt;
+       &lt;meta charset=&quot;utf-8&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;
+      &lt;/head&gt;
+      &lt;style&gt;
+      body {
+      background: #FFF;
+      color: #000;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      }
+
+      #header {
+      background: #797979;
+      width: 100%;
+      height: 100px;
+      }
+
+      #container {
+      background: #a9a9a9;
+      margin: auto auto;
+      text-align: center;
+      width: 100%;
+      }
+
+      #navigation {
+      background: #40E0D0;
+      float: left;
+      width: 25%;
+      }
+
+      #news {
+      background: #40E0D0;
+      float: right;
+      width: 25%;
+      }
+
+      #data {
+      background: #40E0D0;
+      float: right;
+      width: 25%;
+      }
+
+      #content {
+      background: #ffffff;
+      width: 25%;
+      float: left;
+      }
+
+      #clear {
+      clear: both;
+      }
+
+      #footer {
+      background: #d0e292;
+      width: 100%;
+      height: 40px;
+      }
+
+      #hello{
+      background: #40E0D0;
+      float: left;
+
+      }
+      &lt;/style&gt;
+      &lt;body&gt;
+       &lt;div id=&quot;container&quot;&gt;
+
+        &lt;div id=&quot;header&quot;&gt;
+
+         &lt;div id = &quot;hello&quot;&gt;
+          &lt;h2&gt;Вітаємо&lt;/h2&gt;
+         &lt;/div&gt;
+        &lt;h2&gt;
+         шапка сайта
+        &lt;/h2&gt;
+
+        &lt;/div&gt;
+
+       &lt;div id=&quot;navigation&quot;&gt;
+        &lt;H3&gt;
+         Навігація
+        &lt;/H3&gt;
+        &lt;a href=&quot;second.html&quot;&gt;Опис галузі&lt;/a&gt;&lt;/p&gt;
+       &lt;/div&gt;
+
+       &lt;div id=&quot;news&quot;&gt;
+        &lt;h3&gt;Наші дані&lt;/h3&gt;
+       &lt;/div&gt;
+
+       &lt;div id=&quot;content&quot;&gt;
+        &lt;h1&gt;
+         CONTENT
+        &lt;/h1&gt;
+        &lt;h1&gt;
+         CONTENT
+        &lt;/h1&gt;
+
+       &lt;/div&gt;
+
+       &lt;div id=&quot;data&quot;&gt;
+        &lt;h3&gt;Новини готелю&lt;/h3&gt;
+       &lt;/div&gt;
+
+
+       &lt;div id=&quot;clear&quot;&gt;
+
+       &lt;/div&gt;
+
+       &lt;div id=&quot;footer&quot;&gt;
+        FOOTER
+       &lt;/div&gt;
+
+       &lt;/div&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+      </code>
+      </pre>
+    </div>
+    <div class="tab-pane fade" id="v-tab3" role="tabpanel" aria-labelledby="v-tab">
+      Висновки: Для верстки сайтів ми можимо використовувати будь-який із варіантів, які були у лабораторній.
+      Проте верстка сайтів за допомогою таблиць набагато важче, адже весь час треба слідкувати за тегами, для
+      ячейки в ячейці треба слідкувати особливо за таблицею в середині. Так як під час рохзробки сайтів така необхідність
+      часто виникає, то це створює багато незручностей. Також це багато зайвого коду для створення рядків таблиць.
+      Блоки також не ідеальні. Вони можують наїзджати один на одного при малих розширеннях екрану. Також при табличному
+      створенні сайту краща кроссбраузерність дизайну, що не можна сказати про блоки.
+    </div>
+  </div>
+</div>

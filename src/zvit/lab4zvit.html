@@ -1,0 +1,612 @@
+<div class="d-flex align-items-start" >
+    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <button class="nav-link " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#meta4" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Постановка задачі </button>
+        <button class="" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#dym4" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Способи функціонального застосування</button>
+
+        <button class="nav-link" id="v-pil-tab" data-bs-toggle="pill" data-bs-target="#gal4" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Схема URL</button>
+        <button class="nav-link" id="v-pilgs-tab" data-bs-toggle="pill" data-bs-target="#photo4" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Обробник подій</button>
+
+        <button class="nav-link" id="v-pilgaes-tab" data-bs-toggle="pill" data-bs-target="#slad4" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Підстановка(entity)</button>
+        <button class="nav-link" id="v-ettinsdgs-tab" data-bs-toggle="pill" data-bs-target="#sladv4" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Вставка(тег SCRIPT)</button>
+
+        <button class="nav-link" id="v-pial-tab" data-bs-toggle="pill" data-bs-target="#sots4" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Масиви</button>
+
+        <button class="nav-link" id="v-ettings" data-bs-toggle="pill" data-bs-target="#inf4" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Виконання 6 пункту</button>
+
+        <button class="nav-link" id="v-ettinsgs-tab" data-bs-toggle="pill" data-bs-target="#vusnovku4" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Висновки</button>
+    </div>
+
+    <div class="tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="meta4" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            Мета: придбати практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами мови Javasсript,
+            використання об’єктів, масивів, функцій, подій, обробників подій у сценаріях на мові JavaScript
+        </div>
+        <div class="tab-pane fade" id="dym4" role="tabpanel" aria-labelledby="v-pills-profile-tab"></div>
+        <div class="tab-pane fade" id="gal4" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            Схема URL
+            <p><img src="img/lab4/sxemaURL.png"></p>
+            <p><img src="img/lab4/sxema_URL.png"></p>
+            <p>Код:</p>
+            <pre>
+            <code>
+                 &lt;A HREF="JavaScript:alert('Опа, спрацювало');"&gt;Схема URL&lt;/A&gt;
+            </code>
+             </pre>
+        </div>
+        <div class="tab-pane fade" id="photo4" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            Обробник подій:
+            <p><img src="img/lab4/obrobnyk.png"></p>
+            <p><img src="img/lab4/obrobnyk_.png"></p>
+            <p>Код:</p>
+            <pre>
+        <code>
+          &lt;INPUT TYPE = button VALUE = "Натиснути" onClick = "window.alert ( 'Будь ласка, натисніть ще раз');"&gt;
+        </code>
+      </pre>
+        </div>
+        <div class="tab-pane fade" id="slad4" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            Підстановка:
+            <p><img src="img/lab4/pidst.png"></p>
+            <p>Код: спочатку створюється функція для визначення довжини. Це значення ми будемо підставляти у html код</p>
+            <pre>
+        <code>
+          &lt;SCRIPT&gt;
+            function l (){
+            ent = window.location.href;
+            return (ent.length);
+            }
+       &lt;/SCRIPT&gt;
+        </code>
+      </pre>
+            <p>HTML-код: </p>
+            <pre>
+        <code>
+          &lt;FORM&gt;
+            &lt;INPUT VALUE = "& {window.location.href};" SIZE = "& {l()};"&gt;
+          &lt;/FORM&gt;
+        </code>
+      </pre>
+
+        </div>
+        <div class="tab-pane fade" id="sladv4" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            Вставка:
+            <p><img src="img/lab4/vsavka.png"></p>
+            <p>Код: спочатку створюється функція у якій встановлюється значення елемента.</p>
+            <p> У якості елемента використовуємо id </p>
+            <pre>
+        <code>
+          &lt;script&gt;
+              function f() {
+                  document.getElementById('well').innerHTML = 'Використання тегу script!';
+              }
+          &lt;/script&gt;
+        </code>
+      </pre>
+            <p>HTML-код:</p>
+            <pre>
+        <code>
+          &lt;body  onload="f()"&gt;
+          &lt;div id="well"&gt;&lt;/div&gt;
+          &lt;/body&gt;
+        </code>
+      </pre>
+        </div>
+        <div class="tab-pane fade" id="sots4" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            Варіант 3:
+            <p><img src="img/lab4/var3_4.png"></p>
+            <p><img src="img/lab4/result3_4.png"></p>
+            <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+          &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;title&gt;Title&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+          &lt;div id="a"&gt;
+
+          &lt;/div&gt;
+          &lt;br&gt;
+          &lt;div id =b&gt;
+
+          &lt;/div&gt;
+
+          &lt;button id="start"&gt;START&lt;/button&gt;
+          &lt;div&gt;
+              &lt;input type="text"&gt;
+          &lt;/div&gt;
+
+
+
+          &lt;script&gt;
+              function getRandomInt(max) {
+                  return Math.floor(Math.random() * max);
+              }
+
+              function InsertionSort(A){
+                  var n = A.length;
+                  for (var i = 0; i &lt; n; i++)
+                  { var v = A[ i ], j = i-1;
+                      while (j &gt;= 0 &amp;&amp; A[j] &gt; v)
+                      { A[j+1] = A[j]; j--; }
+                      A[j+1] = v;
+                  }
+                  return A;
+              }
+              const button = document.querySelector('#start');
+
+              button.addEventListener('click', event =&gt; {
+                  let A = [];
+                  let B = [];
+
+                  let step;
+                  let maxs=document.querySelector('input').value;
+                  let m = parseInt(maxs, 10);
+                  for (step = 0; step &lt; m; step++) {
+                      A.push(getRandomInt(20))
+                  }
+                  let targetElement = document.querySelector('#a');
+                  targetElement.insertAdjacentHTML('beforeend', "A " + A.toString());
+
+                  let Amax = Math.max.apply(null, A);
+                  for (step = 0; step &lt; m; step++) {
+                      B.push(Amax*A[step])
+                  }
+
+                  let te = document.querySelector('#b');
+                  InsertionSort(A)
+                  A.reverse()
+                  te.insertAdjacentHTML('beforeend', "B "+B.toString());
+
+
+              });
+
+
+
+          &lt;/script&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+            Варіант 5:
+            <p><img src="img/lab4/var5_4.png"></p>
+            <p><img src="img/lab4/result5_4.png"></p>
+            <pre>
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;Title&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;div id="arr"&gt;
+
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;div id="arrPar"&gt;
+
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;div id="arrNepar"&gt;
+
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;div id="sort"&gt;
+
+            &lt;/div&gt;
+            &lt;br&gt;
+            &lt;/div&gt;
+
+            &lt;button id="start"&gt;START&lt;/button&gt;
+            &lt;div&gt;
+                &lt;input type="text"&gt;
+            &lt;/div&gt;
+
+
+            &lt;script&gt;
+                function getRandomInt(max) {
+                    return Math.floor(Math.random() * max);
+                }
+
+                function selectionSort(arr){
+                    for (let i = 0, l = arr.length, k = l - 1; i &lt; k; i++) {
+                    let indexMin = i;
+                    for (let j = i + 1; j &lt; l; j++) {
+                        if (arr[indexMin] &gt; arr[j]) {
+                            indexMin = j;
+                        }
+                    }
+                    if (indexMin !== i) {
+                        [arr[i], arr[indexMin]] = [arr[indexMin], arr[i]];
+                    }
+                }
+                 return arr;
+                }
+
+                const button = document.querySelector('#start');
+
+                button.addEventListener('click', event =&gt; {
+                    let arr = [];
+                    let arrPar = [];
+                    let arrNepar = [];
+
+                    let step;
+                    let maxs=document.querySelector('input').value;
+                    let m = parseInt(maxs, 10);
+                    for (step = 0; step &lt; m; step++) {
+                        arr.push(getRandomInt(20))
+                    }
+
+
+
+
+                    for (step = 0; step &lt; m; step++) {
+                        if (step % 2 == 0) {
+                            arrPar.push(arr[step])
+                        } else {
+                            arrNepar.push(arr[step])
+                        }
+                    }
+
+                    alert(arr.toString());
+
+                    let targetElement = document.querySelector('#arr');
+                    targetElement.insertAdjacentHTML('beforeend', "arr " + arr.toString());
+
+                    let targetElement1 = document.querySelector('#arrPar');
+                    targetElement1.insertAdjacentHTML('beforeend', "arrPar " + arrPar.toString());
+
+                    let targetElement2 = document.querySelector('#arrNepar');
+                    targetElement2.insertAdjacentHTML('beforeend', "arrNepar " + arrNepar.toString());
+
+
+
+                    let targetElement3 = document.querySelector('#sort');
+                    selectionSort(arr);
+                    targetElement3.insertAdjacentHTML('beforeend', "sort " + arr.toString());
+                  });
+            &lt;/script&gt;
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+      </pre>
+        </div>
+        <div class="tab-pane fade" id="inf4" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            Варіант 3:
+            <p><img src="img/lab4/var3_6.png"></p>
+            <p><img src="img/lab4/result3_6.png"></p>
+            <p><img src="img/lab4/result3_6_1.png"></p>
+            <p><img src="img/lab4/result3_6_2.png"></p>
+            <pre>
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;Title&lt;/title&gt;
+                &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.6.4/math.js"&gt;&lt;/script&gt;
+                &lt;style&gt;
+
+                    .calculator {
+                        width: 320px;
+                        height: 480px;
+                        background: #eee;
+                        border-radius: 5px;
+                        box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2), -2px -2px 3px rgba(0, 0, 0, 0.2);
+                    }
+
+                    output {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 300px;
+                        height: 40px;
+                        background: #fff;
+                        margin: 10px auto;
+                        border-radius: 5px;
+                        font-size: 1.4em;
+                        font-weight: bold;
+                        box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3),
+                        inset -1px -1px 1px rgba(0, 0, 0, 0.3);
+                    }
+
+                    .keyboard {
+                        height: 440px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-evenly;
+                        align-items: flex-start;
+                    }
+
+                    button {
+                        margin: 0.5em 1em;
+                        width: 40px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                        font-size: 1em;
+                        font-weight: bold;
+                    }
+                &lt;/style&gt;
+
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;div class="calculator"&gt;
+                &lt;output&gt;&lt;/output&gt;
+            &lt;/div&gt;
+            &lt;/body&gt;
+            &lt;script&gt;
+                const output = document.querySelector('output')
+
+                const div = document.createElement('div')
+                div.classList.add('keyboard')
+                document.querySelector('.calculator').appendChild(div)
+
+                'C CE % / 7 8 9 * 4 5 6 - 1 2 3 + 0 ( ) sqrt ^ ='.split(' ')
+                    .map(symbol =&gt; {
+                        div.insertAdjacentHTML('beforeend', `&lt;button value="${symbol}"&gt;${symbol}&lt;/button&gt;`)
+                    })
+
+                document.querySelectorAll('button').forEach(button =&gt; {
+                    button.addEventListener('click', function () {
+                        // ?> :;8:C 2K7K205BAO DC=:F8O A> 7=0G5=85< :=>?:8 2 :0G5AB25 ?0@0<5B@0
+                        calc(this.value)
+                    })
+                })
+                document.addEventListener('keydown', event =&gt; {
+                    if ((event.key).match(/[0-9%\/*\-+\(\)=]|Backspace|Enter/)) calc(event.key)
+                })
+                function calc(value) {
+                    // 5A;8 =060B 7=0: @025=AB20 8;8 Enter
+                    if (value.match(/=|Enter/)) {
+                        // ?@>1C5< 2K?>;=8BL >?5@0F8N
+                        try {
+                            // 2KG8A;O5< 7=0G5=85 AB@>:8
+                            // MB> 2>7<>6=> 1;03>40@O <5B>4C "evaluate" >1J5:B0 "math"
+                            // Math.trunc 8A?>;L7C5BAO 4;O >:@C3;5=8O 4> F5;>3> G8A;0
+                            output.textContent = Math.trunc(math.evaluate(output.textContent))
+
+                            // 5A;8 >?5@0F8N 2K?>;=8BL =52>7<>6=>
+                        } catch {
+                            // A>E@0=O5< 7=0G5=85 ?>;O
+                            let oldValue = output.textContent
+                            // A>7405< =>2CN ?5@5<5==CN
+                            let newValue = '=54>?CAB8<>5 2K@065=85'
+                            // 2K2>48< 7=0G5=85 =>2>9 ?5@5<5==>9 2 ?>;5
+                            output.textContent = newValue
+                            // G5@57 ?>;B>@K A5:C=4K 2>72@0I05< ?>;N AB0@>5 7=0G5=85
+                            setTimeout(() =&gt; {
+                                output.textContent = oldValue
+                            }, 1500)
+                        }
+
+                        // 5A;8 =060B A8<2>; "C"
+                    } else if (value === 'C') {
+                        // >G8I05< ?>;5
+                        output.textContent = ''
+
+                        // 5A;8 =060B A8<2>; "!" 8;8 Backspace
+                    } else if (value.match(/CE|Backspace/)) {
+                        // C<5=LH05< AB@>:C =0 >48= A8<2>;
+                        output.textContent = output.textContent.substring(0, output.textContent.length - 1)
+
+                        // 5A;8 =060B0 ;N10O 4@C30O (>BD8;LB@>20==0O) :=>?:0 8;8 :;028H0
+                    } else {
+                        // 70?8AK205< 55 7=0G5=85 2 ?>;5
+                        output.textContent += value
+                    }
+                }
+            &lt;/script&gt;
+            &lt;/html&gt;
+        </code>
+      </pre>
+            Варіант 5:
+            <p><img src="img/lab4/var5_6.png"></p>
+            <p><img src="img/lab4/result5_6.png"></p>
+            <p><img src="img/lab4/result5_6_1.png"></p>
+            <p><img src="img/lab4/result5_6_2.png"></p>
+            <pre>
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;title&gt;Title&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;style&gt;
+            * {box-sizing:border-box}
+
+            /* >=B59=5@ A;094-H>C */
+            .slideshow-container {
+              max-width: 1000px;
+              position: relative;
+              margin: auto;
+            }
+
+            /* !:@KBL 87>1@065=8O ?> C<>;G0=8N */
+            .mySlides {
+              display: none;
+            }
+
+            /* ?5@54 8=0704 :=>?:8 */
+            .prev, .next {
+              cursor: pointer;
+              position: absolute;
+              top: 50%;
+              width: auto;
+              margin-top: -22px;
+              padding: 16px;
+              color: white;
+              font-weight: bold;
+              font-size: 18px;
+              transition: 0.6s ease;
+              border-radius: 0 3px 3px 0;
+              user-select: none;
+            }
+
+            /* >;>65=85 "next :=>?:8" A?@020 */
+            .next {
+              right: 0;
+              border-radius: 3px 0 0 3px;
+            }
+
+            /* @8 =02545=88 :C@A>@0 4>102LB5 G5@=K9 F25B D>=0 A =5<=>3> ?@>7@0G=K< */
+            .prev:hover, .next:hover {
+              background-color: rgba(0,0,0,0.8);
+            }
+
+            /* >4?8AL B5:AB */
+            .text {
+              color: #3366CC;
+              font-size: 15px;
+              padding: 8px 12px;
+              position: absolute;
+              bottom: 8px;
+              width: 100%;
+              text-align: center;
+            }
+
+            /* ><5@ B5:AB0 (1/3 8 B.4.) */
+            .numbertext {
+              color: #f2f2f2;
+              font-size: 12px;
+              padding: 8px 12px;
+              position: absolute;
+              top: 0;
+            }
+
+            /* ">G:8/?C;8/8=48:0B>@K */
+            .dot {
+              cursor: pointer;
+              height: 15px;
+              width: 15px;
+              margin: 0 2px;
+              background-color: #bbb;
+              border-radius: 50%;
+              display: inline-block;
+              transition: background-color 0.6s ease;
+            }
+
+            .active, .dot:hover {
+              background-color: #717171;
+            }
+
+            /* AG570NI0O 0=8<0F8O */
+            .fade {
+              -webkit-animation-name: fade;
+              -webkit-animation-duration: 1.5s;
+              animation-name: fade;
+              animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+              from {opacity: .4}
+              to {opacity: 1}
+            }
+
+            @keyframes fade {
+              from {opacity: .4}
+              to {opacity: 1}
+            }
+            &lt;/style&gt;
+            &lt;body&gt;
+            &lt;div class="slideshow-container"&gt;
+
+                &lt;!-- >;=>@07<5@=K5 87>1@065=8O A G8A;>< 8 B5:AB>< ?>4?8A8 --&gt;
+                &lt;div class="mySlides fade"&gt;
+                    &lt;div class="numbertext"&gt;1 / 3&lt;/div&gt;
+                    &lt;img src="img1.jpg" style="width:100%"&gt;
+                    &lt;div class="text"&gt;0@=N=O)&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="mySlides fade"&gt;
+                    &lt;div class="numbertext"&gt;2 / 3&lt;/div&gt;
+                    &lt;img src="img2.jpg" style="width:100%"&gt;
+                    &lt;div class="text"&gt; O?&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="mySlides fade"&gt;
+                    &lt;div class="numbertext"&gt;3 / 3&lt;/div&gt;
+                    &lt;img src="img3.jpg" style="width:100%"&gt;
+                    &lt;div class="text"&gt;8 2AV 30@=N=V...)...&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- ?5@54 8 =0704 :=>?:8 --&gt;
+                &lt;a class="prev" onclick="plusSlides(-1)"&gt;&amp;#10094;&lt;/a&gt;
+                &lt;a class="next" onclick="plusSlides(1)"&gt;&amp;#10095;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;br&gt;
+
+            &lt;!-- ">G:8/:@C38 --&gt;
+            &lt;div style="text-align:center"&gt;
+                &lt;span class="dot" onclick="currentSlide(1)"&gt;&lt;/span&gt;
+                &lt;span class="dot" onclick="currentSlide(2)"&gt;&lt;/span&gt;
+                &lt;span class="dot" onclick="currentSlide(3)"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;script&gt;
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                // ?5@54/=0704 M;5<5=BK C?@02;5=8O
+                function plusSlides(n) {
+                  showSlides(slideIndex += n);
+                }
+
+                // -;5<5=BK C?@02;5=8O <8=80BN@0<8 87>1@065=89
+                function currentSlide(n) {
+                  showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                  var i;
+                  var slides = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("dot");
+                  if (n &gt; slides.length) {slideIndex = 1}
+                  if (n &lt; 1) {slideIndex = slides.length}
+                  for (i = 0; i &lt; slides.length; i++) {
+                      slides[i].style.display = "none";
+                  }
+                  for (i = 0; i &lt; dots.length; i++) {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";
+                  dots[slideIndex-1].className += " active";
+                }
+
+
+                var avtoSlideIndex = 0;
+                    avtoShowSlides();
+
+                function avtoShowSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    for (i = 0; i &lt; slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    avtoSlideIndex++;
+                    if (avtoSlideIndex &gt; slides.length) {avtoSlideIndex = 1}
+                    slides[avtoSlideIndex-1].style.display = "block";
+                    setTimeout(avtoShowSlides, 10000); // 5=O9B5 87>1@065=85 :064K5 2 A5:C=4K
+                }
+
+            &lt;/script&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+      </pre>
+        </div>
+        <div class="tab-pane fade" id="vusnovku4" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            Висновки: Під час виконання данної лабораторної роботи ми ознайомились з мовою JavaScript.
+            З її використанням ми можемо створювати функції(скрипти), щоб взаємодіяти з елементами web-сторінки.
+            Також за її допомоги ми створили калькулятор та слайд-шоу.
+        </div>
+    </div>
+</div>
+
